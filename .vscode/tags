@@ -4,4 +4,16 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+GPIO	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+Importamos	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+Importamos	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+RPi	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+la	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+libreria	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+p	../servo.py	/^p = GPIO.PWM(21,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo$/;"	kind:variable	line:6
+para	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+poder	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
 servo.py	../servo.py	1;"	kind:file	line:1
+sleep	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+time	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+usar	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
