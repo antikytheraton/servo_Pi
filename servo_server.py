@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import RPi.GPIO as GPIO
 from flask import Flask
 
@@ -10,9 +12,16 @@ p = GPIO.PWM(servo, 50)
 p.start(7.5)
 
 @app.route('/')
-def hello(request):
-    print(request)
-    return 'hello'
+def hello():
+    return 'Seismic-safe'
+
+@app.route('/gasSystem/<option>', methods=['POST'])
+def gasSystem(option):
+    '''
+    EndPoint sistema de gas
+    '''
+    print(option)
+    return '{0} sistema de gas'.format(option)
 
 @app.route('/openGas', methods=['POST'])
 def openGas():
@@ -35,6 +44,6 @@ def closeGas():
 if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
-        port=80,
+        port=8080,
         debug=True
     )
