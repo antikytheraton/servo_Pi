@@ -20,26 +20,14 @@ def gasSystem(option):
     '''
     EndPoint sistema de gas
     '''
-    print(option)
-    return '{0} sistema de gas'.format(option)
-
-@app.route('/openGas', methods=['POST'])
-def openGas():
-    '''
-    Endpoint apertura de paso de gas
-    '''
-    p.ChangeDutyCycle(4.5)
-    print('Abriendo paso de gas')
-    return 'Arbiendo paso de gas'
-
-@app.route('/closeGas', methods=['POST'])
-def closeGas():
-    '''
-    Endpoint cerrado de gas
-    '''
-    p.ChangeDutyCycle(10.5)
-    print('Cerrando paso de gas')
-    return 'Cerrando paso de gas'
+    if option == 'abrir':
+        p.ChangeDutyCycle(4.5)
+        return '{0} sistema de gas'.format(option)
+    elif option == 'cerrar':
+        p.ChangeDutyCycle(10.5)
+        return '{0} sistema de gas'.format(option)
+    else:
+        return "Opcion invalida, opciones validas son 'abrir' o 'cerrar"
 
 if __name__ == '__main__':
     app.run(
