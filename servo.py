@@ -1,10 +1,11 @@
 import time                #Importamos time para poder usar time.sleep
 import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO
 
-GPIO.setmode(GPIO.BOARD)   #Ponemos la Raspberry en modo BOARD
-GPIO.setup(21,GPIO.OUT)    #Ponemos el pin 21 como salida
-p = GPIO.PWM(21,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo
-p.start(7.5)               #Enviamos un pulso del 7.5% para centrar el servo
+GPIO.setmode(GPIO.BOARD)     #Ponemos la Raspberry en modo BOARD
+SERVO = 35
+GPIO.setup(SERVO, GPIO.OUT)    #Ponemos el pin 21 como salida
+p = GPIO.PWM(SERVO, 50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo
+p.start(7.5)                   #Enviamos un pulso del 7.5% para centrar el servo
 
 try:                 
     while True:      #iniciamos un loop infinito
