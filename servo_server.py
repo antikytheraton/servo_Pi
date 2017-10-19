@@ -29,6 +29,7 @@ def gasSystem(option):
         p.start(7.5)
         p.ChangeDutyCycle(4.5)
         p.stop()
+        GPIO.cleanup()
         return '{0} sistema de gas'.format(option)
     elif option == 'cerrar':
         GPIO.setmode(GPIO.BOARD)
@@ -38,6 +39,7 @@ def gasSystem(option):
         p.start(7.5)
         p.ChangeDutyCycle(10.5)
         p.stop()
+        GPIO.cleanup()
         return '{0} sistema de gas'.format(option)
     else:
         return "Opcion invalida, opciones validas son 'abrir' o 'cerrar"
