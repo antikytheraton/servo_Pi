@@ -46,6 +46,7 @@ def servo_test():
         time.sleep(0.5)           #pausa de medio segundo
         p.ChangeDutyCycle(7.5)    #Enviamos un pulso del 7.5% para centrar el servo de nuevo
         time.sleep(0.5)           #pausa de medio segundo
+        return 'test OK'
 
     except KeyboardInterrupt:         #Si el usuario pulsa CONTROL+C entonces...
         p.stop()                      #Detenemos el servo
