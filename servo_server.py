@@ -6,8 +6,8 @@ from flask import Flask
 
 app = Flask(__name__)
 
-GPIO.setmode(GPIO.BOARD)
-servo = 35
+# GPIO.setmode(GPIO.BOARD)
+# servo = 35
 # GPIO.setup(servo, GPIO.OUT)
 # p = GPIO.PWM(servo, 50)
 # p.start(7.5)
@@ -22,6 +22,8 @@ def gasSystem(option):
     EndPoint sistema de gas
     '''
     if option == 'abrir':
+        GPIO.setmode(GPIO.BOARD)
+        servo = 35
         GPIO.setup(servo, GPIO.OUT)
         p = GPIO.PWM(servo, 50)
         p.start(7.5)
@@ -29,6 +31,8 @@ def gasSystem(option):
         p.stop()
         return '{0} sistema de gas'.format(option)
     elif option == 'cerrar':
+        GPIO.setmode(GPIO.BOARD)
+        servo = 35
         GPIO.setup(servo, GPIO.OUT)
         p = GPIO.PWM(servo, 50)
         p.start(7.5)
@@ -44,6 +48,8 @@ def servo_test():
     Prueba servo
     '''
     try:
+        GPIO.setmode(GPIO.BOARD)
+        servo = 35
         # while True:      #iniciamos un loop infinito
         GPIO.setup(servo, GPIO.OUT)
         p = GPIO.PWM(servo, 50)
