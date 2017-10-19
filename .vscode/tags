@@ -4,16 +4,31 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Flask	../servo_server.py	/^from flask import Flask$/;"	kind:namespace	line:4
+GPIO	../blink.py	/^import RPi.GPIO as GPIO$/;"	kind:namespace	line:1
 GPIO	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+GPIO	../servo_server.py	/^import RPi.GPIO as GPIO$/;"	kind:namespace	line:3
 Importamos	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
 Importamos	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+LIGHT	../blink.py	/^LIGHT = 19$/;"	kind:variable	line:5
+RPi	../blink.py	/^import RPi.GPIO as GPIO$/;"	kind:namespace	line:1
 RPi	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
+RPi	../servo_server.py	/^import RPi.GPIO as GPIO$/;"	kind:namespace	line:3
+SERVO	../servo.py	/^SERVO = 35$/;"	kind:variable	line:5
+app	../servo_server.py	/^app = Flask(__name__)$/;"	kind:variable	line:6
+blink.py	../blink.py	1;"	kind:file	line:1
+gasSystem	../servo_server.py	/^def gasSystem(option):$/;"	kind:function	line:19
+hello	../servo_server.py	/^def hello():$/;"	kind:function	line:15
 la	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
 libreria	../servo.py	/^import RPi.GPIO as GPIO    #Importamos la libreria RPi.GPIO$/;"	kind:namespace	line:2
-p	../servo.py	/^p = GPIO.PWM(21,50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo$/;"	kind:variable	line:6
+p	../servo.py	/^p = GPIO.PWM(SERVO, 50)        #Ponemos el pin 21 en modo PWM y enviamos 50 pulsos por segundo$/;"	kind:variable	line:7
+p	../servo_server.py	/^p = GPIO.PWM(servo, 50)$/;"	kind:variable	line:11
 para	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
 poder	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+servo	../servo_server.py	/^servo = 35$/;"	kind:variable	line:9
 servo.py	../servo.py	1;"	kind:file	line:1
+servo_server.py	../servo_server.py	1;"	kind:file	line:1
 sleep	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
+time	../blink.py	/^import time$/;"	kind:namespace	line:2
 time	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1
 usar	../servo.py	/^import time                #Importamos time para poder usar time.sleep$/;"	kind:namespace	line:1

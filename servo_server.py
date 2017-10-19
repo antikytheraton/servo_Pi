@@ -24,7 +24,7 @@ def gasSystem(option):
         p.ChangeDutyCycle(4.5)
         return '{0} sistema de gas'.format(option)
     elif option == 'cerrar':
-        p.ChangeDutyCycle(10.5)
+        p.ChangeDutyCycle(30)
         return '{0} sistema de gas'.format(option)
     else:
         return "Opcion invalida, opciones validas son 'abrir' o 'cerrar"
