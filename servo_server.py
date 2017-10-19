@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 GPIO.setmode(GPIO.BOARD)
 servo = 35
-GPIO.setup(servo, GPIO.OUT)
-p = GPIO.PWM(servo, 50)
-p.start(7.5)
+# GPIO.setup(servo, GPIO.OUT)
+# p = GPIO.PWM(servo, 50)
+# p.start(7.5)
 
 @app.route('/')
 def hello():
@@ -22,10 +22,16 @@ def gasSystem(option):
     EndPoint sistema de gas
     '''
     if option == 'abrir':
+        GPIO.setup(servo, GPIO.OUT)
+        p = GPIO.PWM(servo, 50)
+        p.start(7.5)
         p.ChangeDutyCycle(4.5)
         p.stop()
         return '{0} sistema de gas'.format(option)
     elif option == 'cerrar':
+        GPIO.setup(servo, GPIO.OUT)
+        p = GPIO.PWM(servo, 50)
+        p.start(7.5)
         p.ChangeDutyCycle(10.5)
         p.stop()
         return '{0} sistema de gas'.format(option)
@@ -39,7 +45,9 @@ def servo_test():
     '''
     try:
         # while True:      #iniciamos un loop infinito
-
+        GPIO.setup(servo, GPIO.OUT)
+        p = GPIO.PWM(servo, 50)
+        p.start(7.5)
         p.ChangeDutyCycle(4.5)    #Enviamos un pulso del 4.5% para girar el servo hacia la izquierda
         time.sleep(0.5)           #pausa de medio segundo
         p.ChangeDutyCycle(10.5)   #Enviamos un pulso del 10.5% para girar el servo hacia la derecha
