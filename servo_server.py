@@ -38,14 +38,14 @@ def servo_test():
     Prueba servo
     '''
     try:
-        while True:      #iniciamos un loop infinito
+        # while True:      #iniciamos un loop infinito
 
-            p.ChangeDutyCycle(4.5)    #Enviamos un pulso del 4.5% para girar el servo hacia la izquierda
-            time.sleep(0.5)           #pausa de medio segundo
-            p.ChangeDutyCycle(10.5)   #Enviamos un pulso del 10.5% para girar el servo hacia la derecha
-            time.sleep(0.5)           #pausa de medio segundo
-            p.ChangeDutyCycle(7.5)    #Enviamos un pulso del 7.5% para centrar el servo de nuevo
-            time.sleep(0.5)           #pausa de medio segundo
+        p.ChangeDutyCycle(4.5)    #Enviamos un pulso del 4.5% para girar el servo hacia la izquierda
+        time.sleep(0.5)           #pausa de medio segundo
+        p.ChangeDutyCycle(10.5)   #Enviamos un pulso del 10.5% para girar el servo hacia la derecha
+        time.sleep(0.5)           #pausa de medio segundo
+        p.ChangeDutyCycle(7.5)    #Enviamos un pulso del 7.5% para centrar el servo de nuevo
+        time.sleep(0.5)           #pausa de medio segundo
 
     except KeyboardInterrupt:         #Si el usuario pulsa CONTROL+C entonces...
         p.stop()                      #Detenemos el servo
